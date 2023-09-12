@@ -36,14 +36,26 @@ function downloadGit(
   }
   optionOrFn = optionOrFn || {}
   const clone = optionOrFn.clone || false
+
+  normalize(url)
   if (clone) {
   } else {
   }
 }
 
-// function normalize(url: string) {
-//   /^(https:)()/
-// }
+function normalize(url: string) {
+  const regex = /^(https):\/\/(github)(?:\.\w+)\/(.+)(?:#(.+))?$/
+  const match = regex.exec(url)
+  console.log(match)
+  if (match) {
+    const protocol = match[1]
+    const type = match[2]
+    let origin = null
+    if (type === 'github') {
+      origin = 'github.com'
+    }
+  }
+}
 
 export { downloadGit }
 export default downloadGit

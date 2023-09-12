@@ -10,8 +10,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^25.0.4",
     "@rollup/plugin-json": "^6.0.0",
+    "@rollup/plugin-commonjs": "^25.0.4",
     "@rollup/plugin-node-resolve": "^15.2.1",
     "@types/download": "^8.0.2",
     "prettier": "3.0.3",
